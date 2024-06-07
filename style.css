@@ -372,6 +372,7 @@ nav .right {
 }
 
 .pro-cont .cards {
+    padding: 20px;
     height: 100%;
     width: 90%;
     display: flex;
@@ -379,6 +380,7 @@ nav .right {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    overflow-y: scroll;
 }
 
 .cards .card {
@@ -416,7 +418,6 @@ nav .right {
 }
 
 .cards {
-    overflow-y: scroll;
 }
 
 #address {
