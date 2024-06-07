@@ -18,6 +18,7 @@ html {
 }
 
 body {
+    height: n=min-content;
     width: 100vw;
     overflow-x: hidden;
     color: var(--primary-text);
