@@ -172,6 +172,7 @@ nav .right {
 
 .side-bar {
     position: absolute;
+    display: none;
     margin: 10px 0px;
     top: var(--nav-height);
     right: -100%;

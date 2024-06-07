@@ -5,8 +5,10 @@ let menu = document.querySelector('.icon');
 menu.addEventListener('click', () => {
     if(sideBar.style.right === '0%'){
         sideBar.style.right = '-100%';
+        sideBar.style.display = 'none';
         menu.innerHTML = `<i class="fa-solid fa-bars"></i>`;
     }else{
+        sideBar.style.display = 'block';
         sideBar.style.right = '0%';
         menu.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
     }
