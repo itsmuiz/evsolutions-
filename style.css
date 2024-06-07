@@ -168,6 +168,7 @@ nav .right {
 .icon {
     height: 50%;
     width: 50%;
+    cursor: pointer;
 }
 
 .side-bar {
