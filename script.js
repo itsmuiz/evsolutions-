@@ -3,13 +3,13 @@ let navBar = document.querySelector('nav');
 let menu = document.querySelector('.icon');
 
 menu.addEventListener('click', () => {
-    if(sideBar.style.right === '0%'){
+    if (sideBar.style.right === '0%') {
         sideBar.style.right = '-100%';
         sideBar.style.display = 'none';
         menu.innerHTML = `<i class="fa-solid fa-bars"></i>`;
-        }else{
-            sideBar.style.right = '0%';
-            sideBar.style.display = 'block';
+    } else {
+        sideBar.style.right = '0%';
+        sideBar.style.display = 'block';
         menu.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
     }
 });
@@ -30,3 +30,16 @@ prev.addEventListener('click', function () {
 
     slider.prepend(slides[slides.length - 1]);
 });
+
+// the code for on scroll transition
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        console.log('entry: ', entry);
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    })
+});
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

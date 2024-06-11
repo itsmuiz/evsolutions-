@@ -73,7 +73,7 @@
             </div>
         </div>
     </nav>
-    <div class="pg" id="home">
+    <div class="pg hidden" id="home">
         <div class="container">
             <div class="slider">
 
@@ -146,7 +146,7 @@
             <div class="pro-head">
                 <h1>Products</h1>
             </div>
-            <div class="cards">
+            <div class="cards hidden">
                 <div class="card">
                     <div class="card-img">
                         <img src="./dummy.png" alt="">
@@ -204,7 +204,7 @@
             <h1>Address</h1>
         </div>
         <div class="add-main">
-            <div class="add-left">
+            <div class="add-left hidden">
                 <h1>OUR Location</h1>
                 <h2>INDIA DELHI 51</h2>
                 <span>
@@ -212,12 +212,23 @@
                     <p>1234 Street Name,<br>Delhi, India<br>Zip Code: 110051</p>
                 </span>
             </div>
-            <div class="add-right">
-                <form action="">
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <input type="submit" value="Send">
+            <div class="add-right hidden">
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <!-- Replace with your Access Key -->
+                    <input type="hidden" name="access_key" value="bf47c8f9-bd88-4de8-b449-3f0311848f72">
+                
+                    <!-- Form Inputs. Each input must have a name="" attribute -->
+                    <input placeholder="Name" type="text" name="name" required>
+                    <input placeholder="Email" type="email" name="email" required>
+                    <textarea id="message" placeholder="Message" name="message" rows="10" cols="30" required></textarea>
+                
+                    <!-- Honeypot Spam Protection -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                
+                    <button id="send" type="submit">SEND</button>
+                
                 </form>
             </div>
         </div>
@@ -225,7 +236,7 @@
     <div class="pg" id="location">
         <main>
             <h1>Our Location</h1>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d707342.0910586229!2d75.9103051261594!3d28.638946233438165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e1!3m2!1sen!2sin!4v1717672266654!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe class="hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d707342.0910586229!2d75.9103051261594!3d28.638946233438165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e1!3m2!1sen!2sin!4v1717672266654!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </main>
     </div>
 
@@ -235,6 +246,7 @@
             <i class="fa-solid fa-home" title="Go to Home Page Icon"></i>
         </a>
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="./script.js"></script>
 </body>
 

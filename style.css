@@ -26,6 +26,19 @@ body {
     position: relative;
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+}
+
 .pg {
     height: 100vh;
     width: 100vw;
@@ -421,9 +434,6 @@ nav .right {
     align-items: center;
 }
 
-.cards {
-}
-
 #address {
     padding: 20px;
     display: flex;
@@ -498,6 +508,16 @@ form {
 
 input,
 textarea {
+    padding: 10px 5px;
+    width: 80%;
+    border: 2px solid #8D99AE;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#send {
     padding: 10px 5px;
     width: 80%;
     border: 2px solid #8D99AE;
